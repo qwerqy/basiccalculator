@@ -9,11 +9,11 @@ export default {
 
   txtDefault: {
     color: '#ecf0f1',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 20
   },
 
-  test: {
+  contButtonHighlight: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -33,5 +33,10 @@ export default {
     alignItems: 'center',
     borderWidth: 0.5,
     borderColor: '#34495e'
+  },
+
+  contButtoniOS: {
+    alignItems: 'center',
+    padding: 10
   }
 };

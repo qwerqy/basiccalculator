@@ -1,10 +1,10 @@
 import Exponent from 'expo';
 const React = require('react-native');
-const { StyleSheet } = React;
+const { Platform, StyleSheet } = React;
 
 export default {
   statusBar: {
-    backgroundColor: "#2c3e50",
+    backgroundColor: Platform.OS === 'android' ? "#2c3e50" : "transparent",
     height: Exponent.Constants.statusBarHeight,
   },
 
@@ -39,7 +39,7 @@ export default {
 
   txtDefault: {
     color: '#000',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 30
   }
 

@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "calculator",
-    "description": "This project is really great.",
-    "slug": "calculator",
+    "name": "Simple React Native Calculator",
+    "description": "This is my first project on building an app with React Native.",
+    "slug": "simple-react-native-calculator",
     "privacy": "public",
     "sdkVersion": "30.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "githubUrl": "https://github.com/qwerqy/basiccalculator"
   }
 }

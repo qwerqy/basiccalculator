@@ -16,19 +16,19 @@ export default {
 
   txtClear: {
     color: '#2980b9',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 15
   },
 
   txtExpression: {
     color: '#7f8c8d',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 15
   },
 
   txtResult: {
     color: '#27ae60',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 15
   },
 
@@ -75,7 +75,7 @@ export default {
 
   txtEmptyHistory: {
     color: '#7f8c8d',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 15
   }
 };
