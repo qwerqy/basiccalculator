@@ -12,11 +12,11 @@ import HistoryView from './src/components/HistoryView'
 
 //constants
 const buttons = [
-  ['CLEAR', 'DEL'],
-  ['7', '8', '9', '÷'],
-  ['4', '5', '6', 'x'],
-  ['1', '2', '3', '+'],
-  ['.', '0', '=','-']
+  ['C', '+/-', '%', '÷'],
+  ['7', '8', '9', 'x'],
+  ['4', '5', '6', '+'],
+  ['1', '2', '3', '-'],
+  ['.', '0', 'Del','=']
 ]
 
 const initialOutput = '0';
@@ -58,7 +58,7 @@ export default class App extends Component {
           this._initOutput();
           break;
 
-        case buttons[0][1]:
+        case buttons[4][2]:
           if (this.state._output.length === 1){
             this._initOutput();
           }
@@ -67,8 +67,16 @@ export default class App extends Component {
           }
           break;
 
-        case buttons[4][2]:
+        case buttons[4][3]:
           this._evaluate();
+          break;
+
+        case buttons[0][2]:
+          this._inputPercent();
+          break;
+
+        case buttons[0][1]:
+          this._toggleSign();
           break;
 
         default:
@@ -129,10 +137,34 @@ export default class App extends Component {
     }
   }
 
+  _toggleSign() {
+    let output = this.state._output;
+    let newValue = parseFloat(output) * -1
+
+    this.setState({
+      _output: String(newValue)
+    })
+  }
+
+  _inputPercent = () => {
+    let output = this.state._output;
+    let currentValue = parseFloat(output)
+
+    if (currentValue === 0)
+      return
+
+    const fixedDigits = output.replace(/^-?\d*\.?/, '')
+    const newValue = parseFloat(output) / 100
+
+    this.setState({
+      _output: String(newValue.toFixed(fixedDigits.length + 2))
+    })
+  }
+
   //Function to convert the output state into a valid mathematical expression
   _convertToMathExpression = (value) => {
-     let strTemp = value.replace(new RegExp(this._escapeRegExp(buttons[1][3]), 'g'), '/');
-     strTemp = strTemp.replace(new RegExp(this._escapeRegExp(buttons[2][3]), 'g'), '*');
+     let strTemp = value.replace(new RegExp(this._escapeRegExp(buttons[0][3]), 'g'), '/');
+     strTemp = strTemp.replace(new RegExp(this._escapeRegExp(buttons[1][3]), 'g'), '*');
     return strTemp;
   }
 
