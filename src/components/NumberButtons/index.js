@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import {
     View,
     Text,
-    TouchableNativeFeedback
+    TouchableNativeFeedback,
+    TouchableHighlight,
+    Platform
 } from 'react-native';
 
 //Styles
@@ -33,14 +35,14 @@ export default class NumberButtons extends Component {
                         <View key={index} style={styles.contRow}>
                             {
                                 row.map((col,index) => (
-                                    <TouchableNativeFeedback
+                                    <TouchableHighlight
                                         key={index}
                                         onPress={() => this._handleOnPress(col)}
-                                        background={TouchableNativeFeedback.SelectableBackground()}>
-                                        <View style={index >= 3 ? styles.test : styles.contButton}>
+                                        underlayColor="#34495e">
+                                        <View style={index >= 3 ? styles.contButtonHighlight : styles.contButton}>
                                             <Text style={styles.txtDefault}>{col}</Text>
                                         </View>
-                                    </TouchableNativeFeedback>
+                                    </TouchableHighlight>
                                 ))
                             }
                         </View>

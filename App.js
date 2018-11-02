@@ -1,7 +1,6 @@
 //React Modules
 import React, { Component } from 'react';
-import {View,Text,ToastAndroid, ScrollView} from 'react-native';
-import { Font } from 'expo';
+import {Platform, View, Text, ToastAndroid, ScrollView} from 'react-native';
 
 //Styles
 import styles from './styles';
@@ -30,20 +29,10 @@ export default class App extends Component {
       this.state = {
           _output: initialOutput,
           _mathExpression: '',
-          _history: [],
-          fontloaded: false
+          _history: []
       }
       this._handleEvent = this._handleEvent.bind(this);
       this._clearHistory = this._clearHistory.bind(this);
-  }
-
-  // Handles font
-  async componentDidMount() {
-    await Font.loadAsync({
-      'Roboto': require('./assets/fonts/Roboto-Regular.ttf'),
-    });
-
-    this.setState({ fontLoaded: true });
   }
 
   //Handles actions on button press
@@ -196,7 +185,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.statusBar} />
+        {Platform.OS === 'android' && <View style={styles.statusBar} />}
         <View style={styles.contHistory}>
           <HistoryView data={this.state._history} onClear={this._clearHistory}/>
         </View>

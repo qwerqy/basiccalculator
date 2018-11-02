@@ -39,7 +39,7 @@ export default {
 
   txtDefault: {
     color: '#000',
-    fontFamily: 'Roboto',
+    fontFamily: 'System',
     fontSize: 30
   }
 
