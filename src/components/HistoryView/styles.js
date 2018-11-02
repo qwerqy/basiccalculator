@@ -1,40 +1,39 @@
-const React = require('react-native');
+const React = require("react-native");
 const { StyleSheet } = React;
 
 export default {
-
   container: {
-    flex:1,
+    flex: 1
   },
 
   clearCont: {
     height: 40,
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
     paddingRight: 15,
-    justifyContent: 'center'
+    justifyContent: "center"
   },
 
   txtClear: {
-    color: '#2980b9',
-    fontFamily: 'System',
+    color: "#2980b9",
+    fontFamily: "System",
     fontSize: 15
   },
 
   txtExpression: {
-    color: '#7f8c8d',
-    fontFamily: 'System',
+    color: "#7f8c8d",
+    fontFamily: "System",
     fontSize: 15
   },
 
   txtResult: {
-    color: '#27ae60',
-    fontFamily: 'System',
+    color: "#27ae60",
+    fontFamily: "System",
     fontSize: 15
   },
 
   historyCont: {
-      flex: 1,
-      flexDirection: 'column'
+    flex: 1,
+    flexDirection: "column"
   },
 
   placeHolderHistory: {
@@ -43,39 +42,39 @@ export default {
     marginRight: 15,
     paddingTop: 0,
     paddingBottom: 0,
-    flexDirection: 'column',
-    backgroundColor: 'transparent',
+    flexDirection: "column",
+    backgroundColor: "transparent",
     borderTopWidth: 0.7,
-    borderColor: '#2c3e50'
+    borderColor: "#2c3e50"
   },
 
   expressionCont: {
     flex: 0.7,
     paddingTop: 5,
     paddingBottom: 5,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    backgroundColor: 'transparent',
+    justifyContent: "center",
+    alignItems: "flex-end",
+    backgroundColor: "transparent"
   },
 
   resultCont: {
     flex: 0.3,
     paddingTop: 5,
     paddingBottom: 5,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    backgroundColor: 'transparent',
+    justifyContent: "center",
+    alignItems: "flex-end",
+    backgroundColor: "transparent"
   },
 
   emptyHistoryCont: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
 
   txtEmptyHistory: {
-    color: '#7f8c8d',
-    fontFamily: 'System',
+    color: "#7f8c8d",
+    fontFamily: "System",
     fontSize: 15
   }
 };
