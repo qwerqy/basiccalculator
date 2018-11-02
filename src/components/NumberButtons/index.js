@@ -4,8 +4,7 @@ import {
     View,
     Text,
     TouchableNativeFeedback,
-    TouchableHighlight,
-    Platform
+    TouchableHighlight
 } from 'react-native';
 
 //Styles
@@ -36,6 +35,7 @@ export default class NumberButtons extends Component {
                             {
                                 row.map((col,index) => (
                                     <TouchableHighlight
+                                        style={{flex: 1}}
                                         key={index}
                                         onPress={() => this._handleOnPress(col)}
                                         underlayColor="#34495e">

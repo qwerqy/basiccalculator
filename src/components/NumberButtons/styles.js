@@ -1,5 +1,5 @@
 const React = require('react-native');
-const { Platform, StyleSheet } = React;
+const { StyleSheet } = React;
 
 export default {
 
@@ -15,8 +15,6 @@ export default {
 
   contButtonHighlight: {
     flex: 1,
-    width: Platform.OS === 'android' ? 90 : 95,
-    height: 90,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 0.5,
@@ -31,8 +29,6 @@ export default {
 
   contButton: {
     flex: 1,
-    width: Platform.OS === 'android' ? 90 : 95,
-    height: 90,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 0.5,
