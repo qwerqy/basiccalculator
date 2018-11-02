@@ -196,6 +196,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.statusBar} />
         <View style={styles.contHistory}>
           <HistoryView data={this.state._history} onClear={this._clearHistory}/>
         </View>

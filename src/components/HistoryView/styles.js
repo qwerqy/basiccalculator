@@ -21,7 +21,7 @@ export default {
   },
 
   txtExpression: {
-    color: '#000',
+    color: '#7f8c8d',
     fontFamily: 'Roboto',
     fontSize: 15
   },
@@ -46,7 +46,7 @@ export default {
     flexDirection: 'column',
     backgroundColor: 'transparent',
     borderTopWidth: 0.7,
-    borderColor: '#000'
+    borderColor: '#2c3e50'
   },
 
   expressionCont: {
