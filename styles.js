@@ -11,17 +11,17 @@ export default {
   },
 
   contHistory:{
-    flex: 0.35,
+    flex: 0.3,
     borderBottomWidth: 1,
     borderColor: '#000',
   },
 
   contOutput:{
-    flex: 0.25,
+    flex: 0.1,
   },
 
   contButtons:{
-    flex: 0.4,
+    flex: 0.6,
     backgroundColor: '#2c3e50'
   },
 
