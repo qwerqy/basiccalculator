@@ -3,17 +3,20 @@ const React = require('react-native');
 const { StyleSheet } = React;
 
 export default {
+  statusBar: {
+    backgroundColor: "#2c3e50",
+    height: Exponent.Constants.statusBarHeight,
+  },
 
   container: {
     flex:1,
-    flexDirection: 'column',
-    marginTop: Exponent.Constants.statusBarHeight
+    flexDirection: 'column'
   },
 
   contHistory:{
     flex: 0.3,
     borderBottomWidth: 1,
-    borderColor: '#000',
+    borderColor: '#2c3e50',
   },
 
   contOutput:{
